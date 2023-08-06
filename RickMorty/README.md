@@ -4,6 +4,7 @@
 
 ### Estructura de datos
 
+```
 RickMortyAPI/
 ├── node_modules/
 ├── public/
@@ -47,3 +48,4 @@ RickMortyAPI/
 ├── readme.md
 └── vite.config.js
 
+```
