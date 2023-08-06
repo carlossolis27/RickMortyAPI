@@ -1,8 +1,49 @@
-# React + Vite
+# Rick y Morty
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### Grupo #3
 
-Currently, two official plugins are available:
+### Estructura de datos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+RickMortyAPI/
+├── node_modules/
+├── public/
+│   └── favicon.ico
+├── src/
+│   ├── Api/
+│   │   └── api.jsx
+│   ├── assets/
+│   │   ├── img/
+│   │   │   ├── rick-and-morty-background.jpg
+│   │   │   └── ... (otras imágenes)
+│   │   └── ... (otros recursos)
+│   ├── components/
+│   │   ├── CharacterCard.css
+│   │   ├── CharacterCard.jsx
+│   │   ├── Header.jsx
+│   │   ├── LoginButton.jsx
+│   │   ├── LogoutButton.jsx
+│   │   └── Navbar.css
+│   │   └── Navbar.jsx
+│   ├── contexts/
+│   │   ├── FavoriteContext.jsx
+│   │   └── FavoriteProvider.jsx
+│   ├── pages/
+│   │   ├── AboutPage.jsx
+│   │   ├── CharacterPage.css
+│   │   ├── CharacterPage.jsx
+│   │   ├── DevelopersPage.jsx
+│   │   ├── FavoritesPage.jsx
+│   │   ├── HomePage.jsx
+│   │   └── WelcomePage.jsx
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── index.jsx
+├── .eslintrc.cjs
+├── .gitignore
+├── index.html
+├── package-lock.json
+├── package.json
+├── readme.md
+└── vite.config.js
+
