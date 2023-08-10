@@ -1,0 +1,165 @@
+/* Importa la fuente Montserrat si es necesario */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap');
+/* Define las variables */
+:root {
+    --fontMontserrat: "Montserrat", sans-serif;
+    --colorDarkGreen: #1d1d1b;
+    --colorBackground: #244253;
+    --colorInputText: #50B958;
+    --colorCharacter: #00AEC6;
+    --fontAnton: "Anton", sans-serif;
+    --fontAlfa: 'Alfa Slab One', sans-serif;
+    --fontGasoek: 'Gasoek One', sans-serif;
+}
+
+/* Aplica los estilos utilizando las variables */
+body {
+    font-family: var(--fontMontserrat);
+    /*background-color: var(--colorBackground);*/
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding-top: 30px;
+}
+
+.character-card {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.character-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.character-card .card-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.character-card .card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.character-card .card-info {
+    padding: 15px;
+}
+
+.character-card h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#im-txt{
+    font-family: var(--fontGasoek);
+    font-weight: 900;
+    background: url(../assets/img/rick5.jpg) no-repeat center center/cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Estilos para cada personaje */
+.character-card.rick-sanchez {
+    background-color: #0B8457; /* Color verde para Rick Sanchez */
+    color: #FFFFFF; /* Texto en color blanco */
+    }
+    
+    /* Estilos para la card de Morty Smith */
+    .character-card.morty-smith {
+        background-color: #BA2B1B; /* Color rojo para Morty Smith */
+        color: #FFFFFF; /* Texto en color blanco */
+    }
+    
+    /* Estilos para la card de Summer Smith */
+    .character-card.summer-smith {
+        background-color: #FBB040; /* Color amarillo para Summer Smith */
+        color: #FFFFFF; /* Texto en color blanco */
+    }
+    
+    /* Estilos para la card de Beth Smith */
+    .character-card.beth-smith {
+        background-color: #AE348B; /* Color azul para Beth Smith */
+        color: #FFFFFF; /* Texto en color blanco */
+    }
+    
+    /* Estilos para la card de Jerry Smith */
+    .character-card.jerry-smith {
+        background-color: #1B4BA5; /* Color morado para Jerry Smith */
+        color: #FFFFFF; /* Texto en color blanco */
+    }
+
+/* Estilos para el modal */   
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-container {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: #333333;
+}
+
+.modal-container img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el botón de la flecha */
+.arrow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: #333333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.arrow img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
