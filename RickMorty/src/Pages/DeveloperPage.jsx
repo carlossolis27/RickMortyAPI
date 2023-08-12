@@ -1,7 +1,119 @@
-import React from 'react'
+import React from 'react';
+import { WhatsApp, GitHub, LinkedIn } from '@mui/icons-material';
+import './DeveloperPage.css';
+import portal from '../assets/img/rick-and-morty-portal.png';
+import rick from '../assets/img/Rick-And-Morty-die.png';
+import morty from '../assets/img/morty-die1.png';
+import fotoDeveloper1 from '../assets/img/foto_ramon.jpg';
+import fotoDeveloper2 from '../assets/img/foto_carlos.jpg';
+import fotoDeveloper3 from '../assets/img/foto_mike.jpg';
+import fotoDeveloper4 from '../assets/img/foto_1.jpg';
+import fotoDeveloper6 from '../assets/img/foto_sergio.jpg';
 
-export default function DeveloperPage() {
-  return (
-    <div>DeveloperPage</div>
-  )
-}
+const DevelopersPage = () => {
+const developers = [
+    {
+        id: 1,
+        name: 'Ramón Núñez',
+        photo: fotoDeveloper1,
+        email: 'ramonsolis11@gmail.com',
+        whatsapp: '+50498171316',
+        github: 'https://github.com/ramonsolis11',
+        linkedin:'https://www.linkedin.com/in/ramonsolis-dev/',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit architecto recusandae, fugit expedita numquam cupiditate, laborum unde impedit quia eaque nulla maxime autem, rerum rem cumque adipisci voluptatem voluptas esse?',
+    },
+    {
+        id: 2,
+        name: 'Carlos Solis',
+        photo: fotoDeveloper2,
+        email: 'carlossolis27@gmail.com',
+        whatsapp: '+50378870461',
+        github: 'https://github.com/carlossolis27',
+        linkedin: 'http://linkedin.com/in/carlos-solis-4a5516274/',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit architecto recusandae, fugit expedita numquam cupiditate, laborum unde impedit quia eaque nulla maxime autem, rerum rem cumque adipisci voluptatem voluptas esse?',    
+    },
+    {
+        id: 3,
+        name: 'Michael Maldonado',
+        photo: fotoDeveloper3,
+        email: 'maikkel43@gmail.com',
+        whatsapp: '+50377559993',
+        github: 'https://github.com/Maikkel43',
+        linkedin: 'https://www.linkedin.com/in/michael-rivas-683782271',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit architecto recusandae, fugit expedita numquam cupiditate, laborum unde impedit quia eaque nulla maxime autem, rerum rem cumque adipisci voluptatem voluptas esse?',    
+    },
+    {
+        id: 4,
+        name: 'Noé Hércules',
+        photo: fotoDeveloper4,
+        email: 'nohercules777@gmail.com',
+        whatsapp: '+50373949637',
+        github: 'https://github.com/NoeHercules',
+        linkedin: 'https://www.linkedin.com/in/no%C3%A9-hercules-388779139/',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit architecto recusandae, fugit expedita numquam cupiditate, laborum unde impedit quia eaque nulla maxime autem, rerum rem cumque adipisci voluptatem voluptas esse?',    
+    },
+    {
+        id: 5,
+        name: 'Moisés Elvir',
+        photo: fotoDeveloper4,
+        email: 'nohercules777@gmail.com',
+        whatsapp: '+50489550565',
+        github: 'enlace-a-github-4',
+        linkedin: 'enlace-a-linkedin-4',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit architecto recusandae, fugit expedita numquam cupiditate, laborum unde impedit quia eaque nulla maxime autem, rerum rem cumque adipisci voluptatem voluptas esse?',    
+    },
+    {
+        id: 6,
+        name: 'Sergio López',
+        photo: fotoDeveloper6,
+        email: 'javierlopez4566@gamil.com',
+        whatsapp: '+50236652211',
+        github: 'https://github.com/slopez2020276',
+        linkedin: 'https://www.linkedin.com/in/javier-lopez-396441254',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit architecto recusandae, fugit expedita numquam cupiditate, laborum unde impedit quia eaque nulla maxime autem, rerum rem cumque adipisci voluptatem voluptas esse?',    
+    },
+];
+
+return (
+    <div >
+        <div className="container_background">
+            <div ><img src={portal} id='portal'></img></div>
+            <div ><img src={rick}  id='rick'></img></div>
+            <div ><img src={morty}  id='morty'></img></div>
+        </div>
+        <h1 className='m-4'>Desarrolladores</h1>
+        <div className='row justify-content-center '>
+            {developers.map((developer) => (
+                                <div key={developer.id} className='col-lg-3 col-md-6 col-sm-12  p-5 '>
+                    <div className='card mb-4 cards text-white cover_card'>
+                        <img src={developer.photo} alt={developer.name} className='card-img-top img-fluid hover-effect' />
+                        <div className='card-body '>
+                            <h2 className='card-title'>{developer.name}</h2>
+                            <p className='card-text'>Correo electrónico: {developer.email}</p>
+                            <p className='card-text'>WhatsApp: {developer.whatsapp}</p>
+                            <p className='card-text text-justify'>{developer.description}</p>
+                            <div className="social-links d-flex justify-content-around">
+                                <a href={developer.github} target="_blank" rel="noopener noreferrer">
+                                    <GitHub /> {/* GitHub Icon */}
+                                </a>
+                                <a href={developer.linkedin} target="_blank" rel="noopener noreferrer">
+                                    <LinkedIn /> {/* LinkedIn Icon */}
+                                </a>
+                                <a href={`https://wa.me/${developer.whatsapp}`} target="_blank" rel="noopener noreferrer">
+                                    <WhatsApp /> {/* WhatsApp Icon */}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+);
+};
+
+export default DevelopersPage;
+
+
+
+
