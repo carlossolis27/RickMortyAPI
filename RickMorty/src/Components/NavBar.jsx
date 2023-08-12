@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import LoginButton from './LoginButton';
 import LogoutButton from './LogoutButton';
-import './Navbar.css';
+import './NavBar.css';
 
 
 const NavBar = () => {
     const { isAuthenticated } = useAuth0();
-
     return (
         <nav className="navbar navbar-expand-lg bg-dark bg-gradient">
             <div className="container">
