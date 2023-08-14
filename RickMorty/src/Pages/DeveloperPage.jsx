@@ -1,6 +1,5 @@
 import React from 'react';
 import { WhatsApp, GitHub, LinkedIn,  } from '@mui/icons-material';
-import EmailIcon from '@mui/icons-material/Email';
 import './DeveloperPage.css';
 import portal from '../assets/img/rick-and-morty-portal.png';
 import rick from '../assets/img/Rick-And-Morty-die.png';
@@ -9,7 +8,6 @@ import fotoDeveloper1 from '../assets/img/foto_ramon.jpg';
 import fotoDeveloper2 from '../assets/img/foto_carlos.jpg';
 import fotoDeveloper3 from '../assets/img/foto_mike.jpg';
 import fotoDeveloper4 from '../assets/img/foto_1.jpg';
-import fotoDeveloper6 from '../assets/img/foto_sergio.jpg';
 
 const DevelopersPage = () => {
 const developers = [
@@ -66,13 +64,13 @@ const developers = [
 ];
 
 return (
-    <div >
+    <div className='body-developer'>
         <div className="container_background">
             <div ><img src={portal} id='portal'></img></div>
             <div ><img src={rick}  id='rick'></img></div>
             <div ><img src={morty}  id='morty'></img></div>
         </div>
-        <h1 className='m-4 display-1'>Desarrolladores</h1>
+        <h1 className='m-4 display-1 titulo'>Desarrolladores</h1>
         <div className='row justify-content-center '>
             {developers.map((developer) => (
                 <div key={developer.id} className='col-lg-4 col-md-6 col-sm-12  p-5 '>

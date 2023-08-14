@@ -19,7 +19,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+.body-developer{
     background-color: var(--colorBackground);
 }
 
@@ -105,7 +105,7 @@ body{
 }
 
 
-h1 {
+.titulo{
     font-family: var(--fontAnton);
     text-align: center;
     color: whitesmoke;
