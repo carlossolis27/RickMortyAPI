@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Slackey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 /* Define las variables */
 :root {
     --fontMontserrat: "Montserrat", sans-serif;
@@ -13,6 +15,8 @@
     --fontAnton: "Anton", sans-serif;
     --fontAlfa: 'Alfa Slab One', sans-serif;
     --fontGasoek: 'Gasoek One', sans-serif;
+    --fontLuckiest: 'Luckiest Guy', sans-serif;
+    --fontSlackey: 'Slackey', sans-serif;
 }
 
 /* Aplica los estilos utilizando las variables */
@@ -27,6 +31,9 @@ body {
     padding-top: 30px;
 }
 
+.lyrics{
+    font-family: var(--fontLuckiest);
+}
 .character-card {
     width: 100%;
     border-radius: 10px;
@@ -62,13 +69,29 @@ body {
 }
 
 #im-txt{
-    font-family: var(--fontGasoek);
-    font-weight: 900;
-    background: url(../assets/img/rick5.jpg) no-repeat center center/cover;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    font-family: var(--fontSlackey);
+    animation: TextChange 15s linear infinite;
 }
+
+@keyframes TextChange{
+    0%, 100%{
+        color: rgb(41, 255, 112);
+        
+    }
+    25%{
+        color: rgb(218, 255, 86);
+        
+    }
+    50%{
+        color: rgb(175, 225, 9);
+        
+    }
+    75%{
+        color: rgb(106, 252, 254);
+        
+    }
+}
+
 
 /* Estilos para cada personaje */
 .character-card.rick-sanchez {

@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+
+:root {
+    --fontRubik: "Rubik Wet Paint", sans-serif;
+}
+
 /* Navbar.css */
 .navbar-logo {
     width: 100px;
@@ -31,4 +37,8 @@
 .navbar a:active {
     color: #00AEC6;
     text-decoration: none;
+}
+
+.lyrics-nav{
+    font-family: var(--fontRubik);
 }

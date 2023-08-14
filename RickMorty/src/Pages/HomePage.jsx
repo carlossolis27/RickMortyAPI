@@ -40,25 +40,25 @@ const getCharacterClass = (name) => {
     
     return (
         <>
-        <header className='img-fluid'>
+        <header>
         <div id="carouselExampleAutoplaying" className='carousel slide' data-bs-ride="carousel">
             <div className='carousel-inner'>
             <div className="carousel-item active">
             <img src="src/assets/img/RickandMortySlide1.png" className='d-block w-100' alt="Rick1"/>
             <div className="carousel-caption d-md-block">
-            <p className="text-center">Welcome to the club pal!.</p>
+            <h5 className="text-center text-info lyrics">Welcome to the club pal!.</h5>
             </div>
             </div>
             <div className="carousel-item">
                 <img src="src/assets/img/RickandMortySlide2.jpg" className='d-block w-100' alt="Slide2"/>
-                <div className="carousel-caption d-none d-md-block pb-2">
-            <p className="text-center">Wubba lubba dub dub!! </p>
+                <div className="carousel-caption d-md-block pb-2">
+                <h5 className="text-center text-info lyrics">Wubba lubba dub dub!! </h5>
             </div>
             </div>
             <div className='carousel-item'>
                 <img src="src/assets/img/RickandMortySlide3.jpg" className='d-block w-100' alt="Slide3"/>
-                <div className="carousel-caption d-none d-md-block pb-2">
-            <p className="text-center">I turned myself into a pickle, morty! I'm pickle ri-i-i-ick!! </p>
+                <div className="carousel-caption d-md-block pb-2">
+                <h5 className="text-center text-info lyrics">I turned myself into a pickle, morty! I'm pickle ri-i-i-ick!! </h5>
             </div>
             </div>
             </div>
@@ -71,7 +71,7 @@ const getCharacterClass = (name) => {
             </div>
         </header>
         <main className='bg-dark bg-gradient'>
-        <div className="container mt-5">
+        <div className="container ">
         <h1 className="text-center mb-4" id="im-txt">Principales Personajes de la serie Rick and Morty.</h1>
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
             {characters.map((character) => (
