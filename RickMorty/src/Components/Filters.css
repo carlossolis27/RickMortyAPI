@@ -1,0 +1,15 @@
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.input-field {
+    flex: 1;
+}
+
+.select-field {
+    width: 200px;
+}

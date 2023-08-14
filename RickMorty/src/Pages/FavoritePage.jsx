@@ -1,10 +1,13 @@
 import React from "react";
-import { useFavoriteContext } from "../Context/FavoriteContext";
+import { useFavoriteContext } from '../../Context/FavoriteContext';
+
 const FavoritesPage = () => {
-    const { favoriteCharacters } = useFavoriteContext();
+    const { favoriteCharacters, removeFavoriteCharacter } = useFavoriteContext();
+
     const handleRemoveFavorite = (id) => {
-        removeFavorite(id);
+        removeFavoriteCharacter(id); // Usar la función removeFavoriteCharacter
     };
+
     return (
         <div>
             <h1>Página de Favoritos</h1>
@@ -19,4 +22,5 @@ const FavoritesPage = () => {
         </div>
     );
 };
+
 export default FavoritesPage;
