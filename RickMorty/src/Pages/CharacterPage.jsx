@@ -6,7 +6,7 @@ import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Grid';
 import './CharacterPage.css';
-import { useFavoriteContext } from '../contexts/FavoriteContext';
+import { useFavoriteContext } from '../context/FavoriteContext';
 import Filters from '../components/Filters';
 
 

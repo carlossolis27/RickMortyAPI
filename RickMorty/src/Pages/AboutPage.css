@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+
+:root {
+    --fontGochi: 'Gochi Hand', sans-serif;
+    --fontBubble: 'Rubik Bubbles', sans-serif;
+}
+
+.title{
+    font-family: var(--fontBubble);
+    font-size: 400%
+}
+
+.txt{
+    font-family: var(--fontGochi);
+    font-weight: 800;
+    font-size:xx-large;
+}
+
+p{
+    animation: zoom 3s alternate-reverse;
+    animation-delay: 6s;
+    color: #92D991;
+    animation-iteration-count: infinite;
+}
+
+@keyframes zoom{
+    0%{
+        scale: 1.1;
+        color: #82D18F; 
+    }
+}
