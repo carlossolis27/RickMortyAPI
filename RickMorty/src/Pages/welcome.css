@@ -3,12 +3,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Mate+SC&family=Paytone+One&family=Playfair+Display:wght@500&family=Rubik+Mono+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Josefin+Sans:wght@300&family=Mate+SC&family=Paytone+One&family=Playfair+Display:wght@500&family=Rubik+Mono+One&display=swap');
 
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 /* imagen de fondo*/
 .background{
-    background-image: url('../assets/img/fondo2.jpg');
+    background: url('../assets/img/fondo2.jpg') no-repeat center center fixed;
     height: 100%;
     background-size: cover;
-    background-position: center;
 }
 /* color de fondo del login, donde esta el boton de registro*/
 .login{
@@ -29,8 +33,9 @@ font-family: 'Rubik Mono One', sans-serif;
 }
 /* centrado del contenedor*/
 .contenedor{
-    padding-top: 150px;
-    padding-bottom: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /*ancho de la caja*/
 .caja{
@@ -47,7 +52,7 @@ font-family: 'Rubik Mono One', sans-serif;
     font-family: 'Playfair Display', serif;
     font-size: 5rem;
     width: 400px;
-    animation: escribiendo 6s steps(20) infinite, pleca 0.5s step-end infinite alternate;
+    animation: escribiendo 6s steps(20) infinite alternate, pleca 0.5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: solid 3px;
@@ -67,18 +72,31 @@ font-size: 3rem;
 }
 /*estilo del boton del login*/
 .loginButton{
-    background-color: blue;
+    background-color: rgb(44, 210, 144);
     width: 150px;
     border-radius: 12px;
     outline: none;
     padding: 10px;
     font-size: 1.5rem;
+    border: 2px solid #2544;
+    color: #fff;
     font-family: 'Josefin Sans', sans-serif;
     font-family: 'Mate SC', serif;
     font-family: 'Paytone One', sans-serif;
     font-family: 'Playfair Display', serif;
     font-family: 'Rubik Mono One', sans-serif;
 }
+.loginButton:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: rgb(42, 212, 155);
+    border: 2px solid #2544;
+    transition: all 0.3s;
+    font-weight: 700;
+    
+}
+
+/* animaicion del welcome*/
 @keyframes escribiendo{
     0%,100%{
         width:0;
@@ -90,19 +108,37 @@ font-size: 3rem;
         width: 0;
     }
 } 
+/* animacion para que aparezca la pleca*/
 @keyframes pleca{
     50%{
         border-color: transparent;
     }
 }
-@media screen and (max-width: 600px) {
-    .contenedor{
-        padding-top: 20px;
+/* Media queries para dispositivos pequeños */
+@media (max-width: 1024px) {
+    .contenedor {
+        flex-direction: column;
     }
-    .background{
-        height: 800px;
+
+    .caja {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    .introduction h2{
+
+    .caja > div {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .introduction h2 {
         font-size: 4rem;
+        width: 100%;
+        animation: none; /* Desactivar la animación en pantallas pequeñas */
+    }
+
+    .loginButton {
+        width: 100%;
     }
 }

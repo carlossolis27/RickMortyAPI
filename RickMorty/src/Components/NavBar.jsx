@@ -9,6 +9,9 @@ import './NavBar.css';
 const NavBar = () => {
     const { isAuthenticated } = useAuth0();
     return (
+        //para que el nav se muestre solo cuando la persona este dentro 
+        //asi evitar que tenga acceso a lo demas desde el welcome
+        isAuthenticated &&
         <nav className="navbar navbar-expand-lg bg-dark bg-gradient">
             <div className="container">
                 <Link className="navbar-brand" to="/">
@@ -65,6 +68,7 @@ const NavBar = () => {
                 </div>
             </div>
         </nav>
+
     );
 };
 

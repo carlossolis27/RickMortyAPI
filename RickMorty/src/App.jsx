@@ -9,6 +9,7 @@ import FavoritePage from "./Pages/FavoritePage";
 import AboutPage from "./Pages/AboutPage";          
 import DeveloperPage from "./Pages/DeveloperPage";  
 import { useAuth0 } from '@auth0/auth0-react';
+import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
 
 const App = () => {
     const { isAuthenticated } = useAuth0();
@@ -19,15 +20,18 @@ const App = () => {
                 <NavBar/>
                 <FavoriteProvider>
                 <Switch>
-                    { isAuthenticated ? (
-                        <Route path="/home" exact component={HomePage} />
-                    ): (
-                        <Route path="/" exact component={WelcomePage} />
-                    )}
+                    <Route path="/" exact component={WelcomePage} />
                     <Route path="/characters" component={CharacterPage} />
                     <Route path="/favorites" component={FavoritePage} />
                     <Route path="/about" component={AboutPage} />
                     <Route path="/developers" component={DeveloperPage} />
+                    {
+                        isAuthenticated ? (
+                            <Route path="/home" exact component={HomePage} />
+                        ):(
+                            <Redirect to="/" />
+                        )
+                    }
                 </Switch>
                 </FavoriteProvider>
             </div>
