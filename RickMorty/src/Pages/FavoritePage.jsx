@@ -1,5 +1,5 @@
 import React from "react";
-import { useFavoriteContext } from '../../Context/FavoriteContext';
+import { useFavoriteContext } from '../context/FavoriteContext';
 
 const FavoritesPage = () => {
     const { favoriteCharacters, removeFavoriteCharacter } = useFavoriteContext();
