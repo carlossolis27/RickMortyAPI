@@ -13,20 +13,25 @@
 
 .txt{
     font-family: var(--fontGochi);
-    font-weight: 800;
-    font-size:xx-large;
+    color: aliceblue;
 }
 
 p{
-    animation: zoom 3s alternate-reverse;
+    animation: zoom 5s alternate-reverse;
     animation-delay: 6s;
     color: #92D991;
     animation-iteration-count: infinite;
+    text-align: justify;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.justify-text {
+    text-align: justify;
 }
 
 @keyframes zoom{
     0%{
-        scale: 1.1;
-        color: #82D18F; 
+        scale: 1.05;
+        color: #01c0ce; 
     }
 }
