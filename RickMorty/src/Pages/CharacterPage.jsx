@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import CharacterCard from '../components/CharacterCard';
-import Modal from '../components/Modal';
+import CharacterCard from '../Components/CharacterCard';
+import Modal from '../Components/Modal';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Grid';
 import './CharacterPage.css';
-import { useFavoriteContext } from '../context/FavoriteContext';
-import Filters from '../components/Filters';
+import { useFavoriteContext } from '../Context/FavoriteContext';
+import Filters from '../Components/Filters';
 
 
 

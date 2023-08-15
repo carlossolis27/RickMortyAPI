@@ -9,6 +9,7 @@ import './NavBar.css';
 const NavBar = () => {
     const { isAuthenticated } = useAuth0();
     return (
+        isAuthenticated &&
         <nav className="navbar navbar-expand-lg bg-dark bg-gradient">
             <div className="container">
                 <Link className="navbar-brand" to="/">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CharacterCard from './CharacterCard';
 import { useFilterData } from './useFilterData';
 import Filters from './Filters';
@@ -16,8 +16,16 @@ const CharacterList = ({ characters }) => {
         filteredCharacters,
     } = useFilterData(characters);
 
+    const [selectedStatus, setSelectedStatus] = useState('');
+
     // Ordenar los personajes alfabéticamente por nombre
     const sortedCharacters = filteredCharacters.slice().sort((a, b) => a.name.localeCompare(b.name));
+
+    const handleStatusChange = (event) => {
+        const statusValue = event.target.value;
+        setSelectedStatus(statusValue);
+        handleFilter('status', statusValue);
+    };
 
     return (
         <div>
@@ -27,6 +35,7 @@ const CharacterList = ({ characters }) => {
                 filterType={filterType}
                 handleFilter={handleFilter}
                 handleReset={handleReset}
+                handleStatusChange={handleStatusChange} // Pasa la función handleStatusChange a Filters
             />
 
             {filteredCharacters.length === 0 && (
@@ -34,7 +43,7 @@ const CharacterList = ({ characters }) => {
             )}
 
             <div className="character-list">
-                <Grid container spacing={2}> {/* Utiliza Grid container para organizar las tarjetas */}
+                <Grid container spacing={2}>
                     {sortedCharacters.map(character => (
                         <Grid item xs={12} sm={6} md={4} lg={3} key={character.id}>
                             <Link to={`/characters/${character.id}`} key={character.id}>
