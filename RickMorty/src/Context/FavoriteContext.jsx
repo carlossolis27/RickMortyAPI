@@ -13,15 +13,29 @@ export function FavoriteProvider({ children }) {
         setFavoriteCharacters([...favoriteCharacters, character]);
     };
 
-    // Eliminar un personaje de la lista de favoritos
-    function removeFavoriteCharacter(characterId) {
+    const removeFavoriteCharacter = (characterId) => {
         setFavoriteCharacters((prevFavorites) =>
-            prevFavorites.filter((character) => character !== characterId)
+            prevFavorites.filter((character) => character.id !== characterId)
         );
-    }
+    };
+
+    const updateFavoriteCharacterName = (characterId, newName) => {
+        setFavoriteCharacters((prevFavorites) =>
+            prevFavorites.map((character) =>
+                character.id === characterId ? { ...character, name: newName } : character
+            )
+        );
+    };
+
+    const values = {
+        favoriteCharacters,
+        addFavorite,
+        removeFavoriteCharacter,
+        updateFavoriteCharacterName,
+    };
 
     return (
-        <FavoriteContext.Provider value={{ favoriteCharacters, addFavorite }}>
+        <FavoriteContext.Provider value={values}>
             {children}
         </FavoriteContext.Provider>
     );
