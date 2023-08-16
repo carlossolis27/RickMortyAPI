@@ -1,46 +1,57 @@
-import React from 'react';
+import { useEffect, useState } from "react";
+import ReactPaginate from "react-paginate";
 import "./Pagination.css";
 
-const Pagination = ({ currentPage, totalPages, onPageChange }) => {
-    const renderPageNumbers = () => {
-        const pageNumbers = [];
-
-        for (let i = 1; i <= totalPages; i++) {
-            pageNumbers.push(
-                <li
-                    key={i}
-                    className={`page-item ${currentPage === i ? 'active' : ''}`}
-                >
-                    <a
-                        className="page-link"
-                        href="#"
-                        onClick={() => onPageChange(i)}
-                    >
-                        {i}
-                    </a>
-                </li>
-            );
-        }
-
-        return pageNumbers;
-    };
-
-    return (
-        <nav aria-label="Page navigation example">
-    <ul className="pagination">
-        <li className={`pagination-item ${currentPage === 1 ? 'disabled' : ''}`}>
-            <a className="pagination-button" href="#" aria-label="Previous" onClick={() => onPageChange(currentPage - 1)}>
-                Previous
-            </a>
-        </li>
-        {renderPageNumbers()}
-        <li className={`pagination-item ${currentPage === totalPages ? 'disabled' : ''}`}>
-            <a className="pagination-button" href="#" aria-label="Next" onClick={() => onPageChange(currentPage + 1)}>
-                Next
-            </a>
-        </li>
-    </ul>
-</nav>
+const Pagination = ({ pageNumber, info, updatePageNumber }) => {
+    let pageChange = (data) => {
+        updatePageNumber(data.selected + 1);
+        };
+    
+        const [width, setWidth] = useState(window.innerWidth);
+        const updateDimensions = () => {
+        setWidth(window.innerWidth);
+        };
+        useEffect(() => {
+        window.addEventListener("resize", updateDimensions);
+        return () => window.removeEventListener("resize", updateDimensions);
+        }, []);
+    
+        return (
+        <>
+            <style jsx>
+            {`
+                @media (max-width: 768px) {
+                .pagination {
+                    font-size: 12px;
+                }
+                .next,
+                .prev {
+                    display: none;
+                }
+                }
+                @media (max-width: 768px) {
+                .pagination {
+                    font-size: 14px;
+                }
+                }
+            `}
+            </style>
+            <ReactPaginate
+            className="pagination justify-content-center my-4 gap-4"
+            nextLabel="Next"
+            forcePage={pageNumber === 1 ? 0 : pageNumber - 1}
+            previousLabel="Prev"
+            previousClassName="btn btn-primary fs-5 prev"
+            nextClassName="btn btn-primary fs-5 next"
+            activeClassName="active"
+            marginPagesDisplayed={width < 576 ? 1 : 2}
+            pageRangeDisplayed={width < 576 ? 1 : 2}
+            pageCount={info?.pages}
+            onPageChange={pageChange}
+            pageClassName="page-item"
+            pageLinkClassName="page-link"
+            />
+        </>
     );
 };
 

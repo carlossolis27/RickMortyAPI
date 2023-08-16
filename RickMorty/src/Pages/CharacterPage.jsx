@@ -7,9 +7,6 @@ import Stack from '@mui/material/Stack';
 import Grid from '@mui/material/Grid';
 import './CharacterPage.css';
 import { useFavoriteContext } from '../Context/FavoriteContext';
-import Filters from '../Components/Filters';
-
-
 
 const CharacterPage = () => {
     const { favoriteCharacters, addFavorite } = useFavoriteContext();
@@ -17,10 +14,6 @@ const CharacterPage = () => {
     const [pageCharacters, setPageCharacters] = useState([]);
     const [charactersPerPage] = useState(20);
     const [selectedCharacter, setSelectedCharacter] = useState(null);
-
-    const [filterName, setFilterName] = useState('');
-    const [filterSpecies, setFilterSpecies] = useState('');
-    const [filterType, setFilterType] = useState('');
 
     useEffect(() => {
         axios.get(`https://rickandmortyapi.com/api/character?page=${currentPage}`)
@@ -49,43 +42,10 @@ const CharacterPage = () => {
         }
     };
 
-    const handleFilter = (filterName, filterValue) => {
-        switch (filterName) {
-            case 'name':
-                setFilterName(filterValue);
-                break;
-            case 'species':
-                setFilterSpecies(filterValue);
-                break;
-            case 'type':
-                setFilterType(filterValue);
-                break;
-            default:
-                break;
-        }
-    };
-
-    const filteredCharacters = pageCharacters.filter(character => {
-        return character.name.toLowerCase().includes(filterName.toLowerCase())
-            && character.species.toLowerCase().includes(filterSpecies.toLowerCase())
-            && character.type.toLowerCase().includes(filterType.toLowerCase());
-    });
-
-    const handleReset = () => {
-        setFilterName('');
-        setFilterSpecies('');
-        setFilterType('');
-    };
-
     return (
         <div className="container">
-            <Filters
-                filterName={filterName}
-                handleFilter={handleFilter}
-                handleReset={handleReset}
-            />
             <Grid container spacing={2}>
-                {filteredCharacters.map(character => (
+                {pageCharacters.map(character => (
                     <Grid item xs={12} sm={6} md={4} lg={3} key={character.id}>
                         <CharacterCard
                             character={character}
@@ -116,3 +76,4 @@ const CharacterPage = () => {
 };
 
 export default CharacterPage;
+

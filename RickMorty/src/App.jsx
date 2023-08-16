@@ -4,7 +4,8 @@ import { FavoriteProvider } from './Context/FavoriteContext';
 import NavBar from './Components/NavBar';
 import WelcomePage from "./Pages/WelcomePage";
 import HomePage from "./Pages/HomePage";
-import CharacterPage from "./Pages/CharacterPage";  
+import CharacterPage from "./Pages/CharacterPage";
+import FilterPage from './Pages/FilterPage';
 import FavoritePage from "./Pages/FavoritePage";    
 import AboutPage from "./Pages/AboutPage";          
 import DeveloperPage from "./Pages/DeveloperPage";  
@@ -24,6 +25,7 @@ const App = () => {
                         </Route>
                         <Route path="/home" component={HomePage} />
                         <Route path="/characters" component={CharacterPage} />
+                        <Route path="/filter" component={FilterPage} />
                         <Route path="/favorites" component={FavoritePage} />
                         <Route path="/about" component={AboutPage} />
                         <Route path="/developers" component={DeveloperPage} />

@@ -1,8 +1,9 @@
-import React from 'react';  // Importar React
-import ReactDOM from 'react-dom';   // Importar ReactDOM
-import { Auth0Provider } from '@auth0/auth0-react'; // Importar Auth0Provider
-import { BrowserRouter } from 'react-router-dom';   // Importar BrowserRouter
-import App from './App.jsx';    // Importar el componente App
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Auth0Provider } from '@auth0/auth0-react';
+import { BrowserRouter } from 'react-router-dom';
+import { createRoot } from 'react-dom/client';
+import App from './App.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <Auth0Provider

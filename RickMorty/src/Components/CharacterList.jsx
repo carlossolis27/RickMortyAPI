@@ -1,59 +1,31 @@
-import React, { useState } from 'react';
-import CharacterCard from './CharacterCard';
-import { useFilterData } from './useFilterData';
-import Filters from './Filters';
-import { Link } from 'react-router-dom';
-import Grid from '@mui/material/Grid'; // Importa el componente Grid de Material-UI
-import './CharacterList.css'; // Agrega tus estilos personalizados
+import React from 'react';
+import './CharacterList.css';
+import noResultsImage from '../assets/img/rick-morty.png';
 
 const CharacterList = ({ characters }) => {
-    const {
-        filterName,
-        filterSpecies,
-        filterType,
-        handleFilter,
-        handleReset,
-        filteredCharacters,
-    } = useFilterData(characters);
-
-    const [selectedStatus, setSelectedStatus] = useState('');
-
-    // Ordenar los personajes alfabéticamente por nombre
-    const sortedCharacters = filteredCharacters.slice().sort((a, b) => a.name.localeCompare(b.name));
-
-    const handleStatusChange = (event) => {
-        const statusValue = event.target.value;
-        setSelectedStatus(statusValue);
-        handleFilter('status', statusValue);
-    };
-
-    return (
-        <div>
-            <Filters
-                filterName={filterName}
-                filterSpecies={filterSpecies}
-                filterType={filterType}
-                handleFilter={handleFilter}
-                handleReset={handleReset}
-                handleStatusChange={handleStatusChange} // Pasa la función handleStatusChange a Filters
-            />
-
-            {filteredCharacters.length === 0 && (
-                <p>No hay ningún personaje que coincida con la palabra {filterName || filterSpecies || filterType}</p>
+    return (    
+        <ul className="character-list">    
+            {characters.length > 0 ? (
+                characters.map((character) => (    
+                    <li key={character.id} className="character-card">
+                        <img src={character.image} alt={character.name} />
+                        <div>
+                            <h3 style={{ color: '#fde803' }}>{character.name}</h3>
+                            {character.species === 'Alien' && <p>👽</p>}
+                            {character.species === 'Human' && <p>👤</p>}
+                            {character.status === 'Dead' && <p>💀</p>}
+                            {character.status === 'Alive' && <p>🌟</p>}
+                            {character.status === 'unknown' && <p>❓</p>}
+                        </div>
+                    </li>
+                ))
+            ) : (
+                <div className="no-results">
+                    <img src={noResultsImage} alt="No se encontro lo que buscas" />
+                    <p>No characters found.</p>
+                </div>
             )}
-
-            <div className="character-list">
-                <Grid container spacing={2}>
-                    {sortedCharacters.map(character => (
-                        <Grid item xs={12} sm={6} md={4} lg={3} key={character.id}>
-                            <Link to={`/characters/${character.id}`} key={character.id}>
-                                <CharacterCard character={character} />
-                            </Link>
-                        </Grid>
-                    ))}
-                </Grid>
-            </div>
-        </div>
+        </ul>
     );
 };
 
