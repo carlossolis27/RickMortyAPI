@@ -1,56 +1,36 @@
-import React, { useState, useEffect } from 'react';
-import Filters from '../Components/Filters';
-import CharacterList from '../Components/CharacterList';
-import { getAllCharacters } from "../API/Api";
+import React, { useState } from 'react';
+import Filters from '../Components/Filters'; // Asegúrate de tener la ruta correcta
+import CharacterList from '../Components/CharacterList'; // Asegúrate de tener la ruta correcta
 
-const FilterPage = () => {
-    const [characters, setCharacters] = useState([]);
-    const [filteredCharacters, setFilteredCharacters] = useState([]);
-    const [name, setName] = useState('');
-    const [status, setStatus] = useState('all');
+function FilterPage() {
+  const [filters, setFilters] = useState({ name: '', status: '' });
+  const [currentPage, setCurrentPage] = useState(1);
 
-    const handleNameChange = (event) => {
-        setName(event.target.value);
-    };
+  const handleFilterChange = (newFilters) => {
+    setFilters(newFilters);
+    setCurrentPage(1); // Resetear la página cuando cambian los filtros
+  };
 
-    const handleStatusChange = (event) => {
-        setStatus(event.target.value);
-    };
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+  };
 
-    useEffect(() => {
-        async function fetchCharacters() {
-            const charactersData = await getAllCharacters();
-            setCharacters(charactersData);
-            setFilteredCharacters(charactersData);
-        }
-        fetchCharacters();
-    }, []);
-
-    useEffect(() => {
-        const filtered = characters.filter((character) => {
-            const nameMatch = name === '' || character.name.toLowerCase().includes(name.toLowerCase());
-            const statusMatch = status === 'all' || character.status === status;
-            return nameMatch && statusMatch;
-        });
-    
-        setFilteredCharacters(filtered);
-    }, [name, status, characters]);
-
-    return (
-        <div>
-            <h1>Filter Page</h1>
-            <Filters 
-                onNameChange={handleNameChange} 
-                onStatusChange={handleStatusChange} 
-                name={name} 
-                status={status} 
-            />
-            <CharacterList characters={filteredCharacters} />
-        </div>
-    );
-};
+  return (
+    <div>
+      <Filters onFilterChange={handleFilterChange} />
+      <CharacterList
+        filters={filters}
+        currentPage={currentPage}
+        onPageChange={handlePageChange}
+      />
+    </div>
+  );
+}
 
 export default FilterPage;
+
+
+
 
 
 

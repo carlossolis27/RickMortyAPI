@@ -1,7 +1,7 @@
 import React from 'react';
 import CharacterCard from '../components/CharacterCard';
 import { useFilterData } from "../data/useFilterData";
-import Filters from '../components/Filters';
+import Filters from '../Components/Filters';
 import { Link } from 'react-router-dom';
 
 const CharacterList = ({ characters }) => {
