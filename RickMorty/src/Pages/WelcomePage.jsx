@@ -9,7 +9,7 @@ export default function WelcomePage() {
       <div className='introduction col-md-8'>
           <h2 className='title text-center'>Welcome!</h2>
           <h3 className='text-center'>Rick and Morty API</h3>
-          <p>
+          <p className='text-white m-3'>
           ¿Eres un fanático acérrimo de algún personaje en particular? No hay problema, 
           puedes buscar y guardar tus personajes favoritos para acceder fácilmente a su información en el futuro. ¡Así que prepárate para 
           embarcarte en una aventura interdimensional mientras disfrutas de la colección más completa de 

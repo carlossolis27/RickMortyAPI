@@ -80,7 +80,7 @@ return (
                     <div className='col-md-12 col-lg-4 container '>
                         <div className='row m-3 border border-5 border-success rounded'>
                         <div className='col-md-6 p-0'>
-                            <img key={character.image} src={character.image} alt={character.name} className='img-fluid' style={{height: '25rem'}} />
+                            <img src={character.image} alt={character.name} className='img-fluid' style={{height: '25rem'}} />
                         </div>
                         <div className='col-md-6 bg-white  '>
                             <h2 className='text-center text-success py-3 fw-bold fs-2'>{character.name}</h2>
