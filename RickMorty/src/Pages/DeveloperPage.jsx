@@ -21,7 +21,7 @@ const developers = [
         whatsapp: '+50498171316',
         github: 'https://github.com/ramonsolis11',
         linkedin:'https://www.linkedin.com/in/ramonsolis-dev/',
-        description: 'Desarrollador full stack jr, encargado del diseño y desarrollo de la página de PERSONAJES del sitio web.',
+        description: 'Desarrollador full stack jr, encargado del diseño y desarrollo de la página de PERSONAJES y del filtrado de estos en el sitio web.',
     },
     {
         id: 2,
@@ -31,7 +31,7 @@ const developers = [
         whatsapp: '+50378870461',
         github: 'https://github.com/carlossolis27',
         linkedin: 'http://linkedin.com/in/carlos-solis-4a5516274/',
-        description: 'Desarrollador full stack jr, encargado del diseño y desarrollo de la página de INICIO del sitio web.',
+        description: 'Desarrollador full stack jr, encargado del diseño y desarrollo de la página de INICIO, NOSOTROS y del filtrado de personajes en el sitio web.',
     },
     {
         id: 3,
@@ -41,7 +41,7 @@ const developers = [
         whatsapp: '+50377559993',
         github: 'https://github.com/Maikkel43',
         linkedin: 'https://www.linkedin.com/in/michael-rivas-683782271',
-        description: 'Desarrollador full stack jr, encargado del diseño y desarrollo de la página de BIENVENIDOS del sitio web.',
+        description: 'Desarrollador full stack jr, encargado del diseño y desarrollo de la página de BIENVENIDOS y del filtrado de personajes en el sitio web.',
     },
     {
         id: 4,
@@ -61,7 +61,7 @@ const developers = [
         whatsapp: '+50373949637',
         github: 'https://github.com/NoeHercules',
         linkedin: 'https://www.linkedin.com/in/no%C3%A9-hercules-388779139/',
-        description: 'Desarrollador full stack jr, encargado del diseño y desarrollo de la página de DESARROLLADORES del sitio web.',
+        description: 'Desarrollador full stack jr, encargado del diseño y desarrollo de la página de DESARROLLADORES,NOSOTROS y definicion de algunos estilos del sitio web.',
     },
 ];
 

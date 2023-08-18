@@ -1,14 +1,4 @@
 /* FavoritesPage.css */
-h1 {
-    text-align: center;
-    font-size: 46px; 
-    font-family: 'Comic Sans MS', cursive;
-    margin: 20px 0;
-    color: #ff9900;
-    text-transform: uppercase; 
-    letter-spacing: 4px; 
-    text-shadow: 10px 10px 12px rgba(0, 0, 0, 0.5); 
-}
 
 
 /* Estilo para el texto "Ordenar por" y el selector de orden */
@@ -97,5 +87,3 @@ h1 {
     color: #888;
     cursor: not-allowed;
 }
-
-  

@@ -16,7 +16,7 @@
     color: aliceblue;
 }
 
-p{
+.parrafo{
     animation: zoom 5s alternate-reverse;
     animation-delay: 6s;
     color: #92D991;

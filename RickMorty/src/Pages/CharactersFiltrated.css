@@ -1,0 +1,34 @@
+/* Importa la fuente Montserrat si es necesario */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+
+/* Define las variables */
+:root {
+    --fontMontserrat: "Montserrat", sans-serif;
+    --colorDarkGreen: #1d1d1b;
+    --colorBackground: #244253;
+    --colorInputText: #50B958;
+    --colorCharacter: #00AEC6;
+    --fontAnton: "Anton", sans-serif;
+    --fontAlfa: 'Alfa Slab One', sans-serif;
+    --fontGasoek: 'Gasoek One', sans-serif;
+    --fontRubik: "Rubik Wet Paint", sans-serif;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.titulo{
+    font-family: var(--fontRubik);
+    text-align: center;
+    color: var(--colorInputText);
+    text-shadow: -3px 3px #ffffff, -3px -3px #ffffff, 3px -3px #ffffff, 3px 3px #f3f3f2, 6px 6px #6ac7c2;
+}
+
+

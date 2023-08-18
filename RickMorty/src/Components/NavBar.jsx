@@ -16,7 +16,7 @@ const NavBar = () => {
                     <img src= "src/assets/img/logo.png" alt="Rick and Morty" className="navbar-logo" />
                 </Link>
                 <button
-                    className="navbar-toggler"
+                    className="navbar-toggler border-success"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#navbarNav"

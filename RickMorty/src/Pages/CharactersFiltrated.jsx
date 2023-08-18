@@ -53,44 +53,45 @@ useEffect(() => {
 
 return (
     <div>
-    <h1 className='text-center text-danger'>Rick and Morty Character Search</h1>
-        <form className='row container m-auto'>
-            <div className='col-md-6 my-3' >
-                <label className='form-label'>Search By Name</label>
-            <input className='form-control' type="text" name='name' placeholder="Search by name" onChange={handleInputChange} />
+    <h1 className='text-center titulo m-3'>Filtrado de personajes</h1>
+        <div className='container d-flex justify-content-center align-items-center'>
+        <form className='row m-1 '>
+            <div className='col-md-5 m-3 ' >
+                <label className='form-label text-white'>Nombre</label>
+            <input className='form-control' type="text" name='name' placeholder="Buscar por nombre" onChange={handleInputChange} />
             </div>
-            <div className='col-md-6 my-3'>
-                <label className='form-label'>Search By Status</label>
-            <input className='form-control' type="text" name='status' placeholder='Search by status' onChange={handleInputChange} />
+            <div className='col-md-5 m-3'>
+                <label className='form-label text-white'>Estado</label>
+            <input className='form-control' type="text" name='status' placeholder='Ej: Alive, Dead o unknown ' onChange={handleInputChange} />
             </div>
-            <div className='col-md-6 my-3'>
-                <label className='form-label'>Search By Origin</label>
-            <input className='form-control' type="text" name='origin' placeholder='Search by origin' onChange={handleInputChange} />
+            <div className='col-md-5 m-3'>
+                <label className='form-label text-white'>Origen</label>
+            <input className='form-control' type="text" name='origin' placeholder='Ej: Earth, dimension o unknown' onChange={handleInputChange} />
             </div> 
-            <div className='col-md-6 my-3'>
-                <label className='form-label'>Search By Species</label>
-            <input className='form-control' type="text" name='species' placeholder='Search by species' onChange={handleInputChange} />
+            <div className='col-md-5 m-3'>
+                <label className='form-label text-white'>Especie</label>
+            <input className='form-control' type="text" name='species' placeholder='Ej: Human, Alien, Robot, animal o unknown' onChange={handleInputChange} />
             </div>
         </form>
-    <div className='row container'>
+        </div>
+    <div className='row '>
         {filteredCHaracters.map((character) =>{
                 return(
-                    <div className='col-md-6 container '>
-            <div className='row m-3 border border-5 border-success rounded'>
-            <div className='col-md-6 p-0'>
-                <img src={character.image} alt={character.name} className='img-fluid' style={{height: '25rem'}} />
-            </div>
-            <div className='col-md-6 bg-dark py-4'>
-                <h1 className='text-center text-success'>{character.name}</h1>
-                <p className='text-danger text-center'>Estado: <span className='text-secondary'>{character.status}</span></p>
-                <p className='text-danger text-center'>Species: <span className='text-secondary'>{character.species}</span></p>
-                <p className='text-danger text-center'>Gender: <span className='text-secondary'>{character.gender}</span></p>
-                <p className='text-danger text-center'>Origin: <span className='text-secondary'>{character.origin.name}</span></p>
-                <p className='text-danger text-center'>Location: <span className='text-secondary'>{character.location.name}</span></p>
-
-            </div>
-            </div>
-            </div>
+                    <div className='col-md-12 col-lg-4 container '>
+                        <div className='row m-3 border border-5 border-success rounded'>
+                        <div className='col-md-6 p-0'>
+                            <img key={character.image} src={character.image} alt={character.name} className='img-fluid' style={{height: '25rem'}} />
+                        </div>
+                        <div className='col-md-6 bg-white  '>
+                            <h2 className='text-center text-success py-3 fw-bold fs-2'>{character.name}</h2>
+                            <p className='text-success text-star fs-5 px-3'>Estado: <span className='text-secondary'>{character.status}</span></p>
+                            <p className='text-success text-star fs-5 px-3'>Species: <span className='text-secondary'>{character.species}</span></p>
+                            <p className='text-success text-star fs-5 px-3'>Gender: <span className='text-secondary'>{character.gender}</span></p>
+                            <p className='text-success text-star fs-5 px-3'>Origin: <span className='text-secondary'>{character.origin.name}</span></p>
+                            <p className='text-success text-star fs-5 px-3'>Location: <span className='text-secondary'>{character.location.name}</span></p>
+                        </div>
+                        </div>
+                    </div>
                 )
         })}
     </div>

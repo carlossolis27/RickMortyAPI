@@ -33,6 +33,7 @@ body {
 
 .lyrics{
     font-family: var(--fontLuckiest);
+    -webkit-text-stroke: .01px #fff;
 }
 .character-card {
     width: 100%;

@@ -42,8 +42,8 @@ const FavoritesPage = () => {
 
     return (
         <div>
-            <h1><center>Favoritos</center></h1>
-            <div className="select-container">
+            <h1 className="titulo display-1"><center>Favoritos</center></h1>
+            <div className="select-container container d-flex justify-content-center align-items-center">
                 <span className="select-label">Ordenar por:</span>
                 <select className="select" onChange={(e) => setOrden(e.target.value)}>
                     <option value="nombre">Nombre</option>
@@ -52,9 +52,9 @@ const FavoritesPage = () => {
                 </select>
             </div>
             <br/>
-            <div className="character-grid">
+            <div className="character-grid row gx-3 gy-3">
                 {favoriteCharacters.sort(ordenarFavoritos).map((character) => (
-                    <div key={character.id} className="character-card">
+                    <div key={character.id} className="character-card ">
                         <img src={character.image} alt={character.name} className="character-image" />
                         <div>
                             {editCharacterId === character.id ? (
@@ -69,9 +69,9 @@ const FavoritesPage = () => {
                                 </div>
                             ) : (
                                 <div>
-                                    <h3>{character.name}</h3>
-                                    <p>Status: {character.status}</p>
-                                    <p>Especie: {character.species}</p>
+                                    <h3 className="m-3 text-dark">{character.name}</h3>
+                                    <p className='text-light fs-5 px-3'>Status: {character.status}</p>
+                                    <p className='text-light fs-5 px-3'>Especie: {character.species}</p>
                                     <center>
                                         <button onClick={() => handleEditClick(character.id)} className="edit-button">
                                             <FontAwesomeIcon icon={faEdit} /> Editar

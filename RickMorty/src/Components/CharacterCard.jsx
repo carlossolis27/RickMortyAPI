@@ -9,14 +9,14 @@ const CharacterCard = ({ character, onOpenModal }) => {
     };
 
     return (
-        <div className={`character-card ${isFavorite ? 'favorite' : ''}`}>
+        <div className={`character-card ${isFavorite ? 'favorite' : ''} h-100`} >
             <img src={character.image} alt={character.name} />
-            <h3>{character.name}</h3>
+            <h3 className='m-3 text-light'>{character.name}</h3>
             {character.status === 'Dead' && <span>💀</span>}
             {character.status === 'Alive' && <span>🌟</span>}
             {character.species === 'Human' && <span>👤</span>}
             {character.species === 'Alien' && <span>👽</span>}
-            <button onClick={() => onOpenModal(character)}>Ver Detalles</button>
+            <button onClick={() => onOpenModal(character)} className='btn btn-light m-1'>Ver Detalles</button>
         </div>
     );
 };

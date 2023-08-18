@@ -43,7 +43,7 @@ const CharacterPage = () => {
     };
 
     return (
-        <div className="container">
+        <div className="container ">
             <Grid container spacing={2}>
                 {pageCharacters.map(character => (
                     <Grid item xs={12} sm={6} md={4} lg={3} key={character.id}>

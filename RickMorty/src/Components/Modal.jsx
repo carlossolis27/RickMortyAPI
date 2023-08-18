@@ -20,21 +20,20 @@ const Modal = ({
     return ( 
         <div className="modal-overlay">
             <div className="modal-container">
-                <button className="close-modal-btn" onClick={onCloseModal}>
+                <button className="close-modal-btn btn " onClick={onCloseModal}>
                     Cerrar
                 </button>
-                <h2>{character.name}</h2>
-                <img src={character.image} alt={character.name} />
-                <p>Status: {character.status}</p> 
-                <p>Species: {character.species}</p>
-                <p>Gender: {character.gender}</p>
-                <p>Origin: {character.origin.name}</p>
+                <h2 className='m-3'>{character.name}</h2>
+                <img src={character.image} alt={character.name} className='rounded-4 '/>
+                <p className='fw-bold text-info text-star fs-5 px-3'>Status: {character.status}</p> 
+                <p className='fw-bold text-info text-star fs-5 px-3'>Species: {character.species}</p>
+                <p className='fw-bold text-info text-star fs-5 px-3'>Gender: {character.gender}</p>
+                <p className='fw-bold text-info text-star fs-5 px-3'>Origin: {character.origin.name}</p>
                 {/* Agregar más detalles aquí si es necesario */}
-                <button
-                    className={`favorite-button ${isFavorite ? 'favorite' : ''}`} 
-                    onClick={handleFavoriteClick} 
-                >
-                    <FaHeart color={isFavorite ? 'red' : 'black'} />    
+                <button 
+                    className={`favorite-button btn btn-secondary m-3 ${isFavorite ? 'favorite' : ''}`} 
+                    onClick={handleFavoriteClick} boton >
+                    <FaHeart color={isFavorite ? 'red' : 'black'} className='m-1' />    
                     Agregar a Favoritos
                 </button>
             </div>
