@@ -69,9 +69,24 @@ RickMortyAPI/
    <img src="https://img.shields.io/badge/STATUS-FINALIZADO-brightgreen">
 </p>
 
-Visita mi [sitio web](https://hacker-ranks.netlify.app/) para obtener más información.
+Visita mi [sitio web](https://rickandmortyapp1.netlify.app/) para obtener más información.
 
-Insertar imagenes aca
+![Portada](https://github.com/carlossolis27/RickMortyAPI/assets/80738178/169137be-f654-423b-9ea9-d4f03b5dcfeb)
+
+![Auth0](https://github.com/carlossolis27/RickMortyAPI/assets/80738178/30541021-24d6-4eb8-a6d9-51475c563725)
+
+![HomePage](https://github.com/carlossolis27/RickMortyAPI/assets/80738178/e9b75a93-4b86-43e5-85c5-09d51dc0e75e)
+
+![Personajes](https://github.com/carlossolis27/RickMortyAPI/assets/80738178/ac9708d7-9726-4ab8-826d-8d07b6c8a94c)
+
+![Filtrado](https://github.com/carlossolis27/RickMortyAPI/assets/80738178/ebc71932-5644-49db-8c97-0531a5c50fad)
+
+![Responsive 1](https://github.com/carlossolis27/RickMortyAPI/assets/80738178/c6dbfeb5-5751-4680-ab67-54414e11f868)
+
+![Responsive 2](https://github.com/carlossolis27/RickMortyAPI/assets/80738178/c71ec25e-947c-412e-a75a-3e90f8a1091d)
+
+![Responsive 3](https://github.com/carlossolis27/RickMortyAPI/assets/80738178/5f676a38-84f3-4677-b0ee-2ae63a73e094)
+
 
    <h4 align="center">Proyecto finalizado</h4>
 
@@ -121,8 +136,7 @@ npm install @mui/icons-material
 
 ## Colaboradores
 
-| [<img src="https://avatars.githubusercontent.com/u/80738178?s=400&u=bf225aa72af9e37f869241a241e08254bb04d972&v=4" width=115><br><sub>Ramón Nuñez</sub>](https://github.com/ramonsolis11) |  [<img src="https://avatars.githubusercontent.com/u/86701019?v=4" width=115><br><sub>Moises Elvir</sub>](https://github.com/MoisesElvir) |  [<img src="https://avatars.githubusercontent.com/u/127003959?v=4" width=115><br><sub>Michael Maldonado</sub>](https://github.com/Maikkel43) | [<img src="https://avatars.githubusercontent.com/u/80052500?v=4" width=115><br><sub>Carlos Solis</sub>](https://github.com/carlossolis27) | <img src="https://avatars.githubusercontent.com/u/132025425?s=400&u=ae584811753231ca3f06b0b8165577468354da00&v=4" width=115><br><sub>Noe Hercules</sub>](https://github.com/NoeHercules) |
-| :---: | :---: | :---: | :---: | | :---: | | :---: |
+| [<img src="https://avatars.githubusercontent.com/u/80738178?s=400&u=bf225aa72af9e37f869241a241e08254bb04d972&v=4" width=115><br><sub>Ramón Nuñez</sub>](https://github.com/ramonsolis11) |  [<img src="https://avatars.githubusercontent.com/u/86701019?v=4" width=115><br><sub>Moises Elvir</sub>](https://github.com/MoisesElvir) |  [<img src="https://avatars.githubusercontent.com/u/127003959?v=4" width=115><br><sub>Michael Maldonado</sub>](https://github.com/Maikkel43) | [<img src="https://avatars.githubusercontent.com/u/80052500?v=4" width=115><br><sub>Carlos Solis</sub>](https://github.com/carlossolis27) | <img src="https://avatars.githubusercontent.com/u/132025425?s=400&u=ae584811753231ca3f06b0b8165577468354da00&v=4" width=115><br><sub>Noe Hercules</sub>](https://github.com/NoeHercules) | | :---: | :---: | :---: | :---: | | :---: | | :---: |
 
 
 Se agradece la contribución de todos los colaboradores en la finalización exitosa de este proyecto.
