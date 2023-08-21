@@ -44,19 +44,19 @@ const getCharacterClass = (name) => {
         <div id="carouselExampleAutoplaying" className='carousel slide ' data-bs-ride="carousel">
             <div className='carousel-inner'>
             <div className="carousel-item active">
-            <img src="src/assets/img/pie_manzana_3.jpg" className='d-block w-100' alt="Rick1"/>
+            <img src="../assets/img/RickandMortySlide1.png" className='d-block w-100' alt="Rick1"/>
             <div className="carousel-caption d-md-block">
             <h5 className="text-center text-info lyrics fs-3">Welcome to the club pal!.</h5>
             </div>
             </div>
             <div className="carousel-item">
-                <img src="src/assets/img/RickandMortySlide2.jpg" className='d-block w-100' alt="Slide2"/>
+                <img src="../assets/img/RickandMortySlide2.jpg" className='d-block w-100' alt="Slide2"/>
                 <div className="carousel-caption d-md-block pb-2">
                 <h5 className="text-center text-info lyrics fs-3">Wubba lubba dub dub!! </h5>
             </div>
             </div>
             <div className='carousel-item'>
-                <img src="src/assets/img/RickandMortySlide3.jpg" className='d-block w-100' alt="Slide3"/>
+                <img src="../assets/img/RickandMortySlide3.jpg" className='d-block w-100' alt="Slide3"/>
                 <div className="carousel-caption d-md-block pb-2">
                 <h5 className="text-center text-info lyrics fs-3">I turned myself into a pickle, morty! I'm pickle ri-i-i-ick!! </h5>
             </div>
