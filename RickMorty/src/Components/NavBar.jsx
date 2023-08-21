@@ -4,6 +4,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import LoginButton from './LoginButton';
 import LogoutButton from './LogoutButton';
 import './NavBar.css';
+import logo from '../assets/img/logo.png'
 
 
 const NavBar = () => {
@@ -13,7 +14,7 @@ const NavBar = () => {
         <nav className="navbar navbar-expand-lg bg-dark bg-gradient">
             <div className="container">
                 <Link className="navbar-brand" to="/">
-                    <img src= "src/assets/img/logo2.png" alt="logo" className="navbar-logo" />
+                    <img src={logo} alt="logo" className="navbar-logo" />
                 </Link>
                 <button
                     className="navbar-toggler border-success"

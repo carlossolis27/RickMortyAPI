@@ -61,21 +61,21 @@ const developers = [
         whatsapp: '+50373949637',
         github: 'https://github.com/NoeHercules',
         linkedin: 'https://www.linkedin.com/in/no%C3%A9-hercules-388779139/',
-        description: 'Desarrollador full stack jr, encargado del diseño y desarrollo de la página de DESARROLLADORES,NOSOTROS y definicion de algunos estilos del sitio web.',
+        description: 'Desarrollador full stack jr, encargado del diseño y desarrollo de la página de DESARROLLADORES, NOSOTROS y definicion de algunos estilos del sitio web.',
     },
 ];
 
 return (
-    <div className='body-developer'>
+    <div className='container body-developer'>
         <div className="container_background">
             <div ><img src={portal} id='portal'></img></div>
             <div ><img src={rick}  id='rick'></img></div>
             <div ><img src={morty}  id='morty'></img></div>
         </div>
-        <h1 className='m-4 display-2 titulo '>Desarrolladores</h1>
-        <div className='row justify-content-center '>
+        <h1 className='m-3 display-2 titulo '>Desarrolladores</h1>
+        <div className='row'>
             {developers.map((developer) => (
-                <div key={developer.id} className='col-lg-4 col-md-10 col-sm-12  p-5 '>
+                <div key={developer.id} className='col-lg-4 col-md-6 col-sm-12  '>
                     <div className='card mb-4 cards text-white  cover_card container-cards'>
                         <img src={developer.photo} alt={developer.name} className='card-img-top img-fluid hover-effect' />
                         <div className='card-body '>

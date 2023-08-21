@@ -3,6 +3,9 @@ import axios from 'axios';
 import LogoutButton from '../Components/LogoutButton';
 import './HomePage.css';
 import { Link } from 'react-router-dom';
+import Rick1 from '../assets/img/carrusel1.png'
+import Rick2 from '../assets/img/carrusel2.jpg'
+import Rick3 from '../assets/img/carrusel3.jpg'
 
 
 const HomePage = () => {
@@ -44,19 +47,19 @@ const getCharacterClass = (name) => {
         <div id="carouselExampleAutoplaying" className='carousel slide ' data-bs-ride="carousel">
             <div className='carousel-inner'>
             <div className="carousel-item active">
-            <img src="src\assets\img\carrusel1.png" className='d-block w-100' alt="Rick1"/>
+            <img src={Rick1} className='d-block w-100' alt="Rick1"/>
             <div className="carousel-caption d-md-block">
             <h5 className="text-center text-info lyrics fs-3">Welcome to the club pal!.</h5>
             </div>
             </div>
             <div className="carousel-item">
-                <img src="src\assets\img\carrusel2.jpg" className='d-block w-100' alt="Slide2"/>
+                <img src={Rick2} className='d-block w-100' alt="Slide2"/>
                 <div className="carousel-caption d-md-block pb-2">
                 <h5 className="text-center text-info lyrics fs-3">Wubba lubba dub dub!! </h5>
             </div>
             </div>
             <div className='carousel-item'>
-                <img src="src\assets\img\fondo3.jpg" className='d-block w-100' alt="Slide3"/>
+                <img src={Rick3} className='d-block w-100' alt="Slide3"/>
                 <div className="carousel-caption d-md-block pb-2">
                 <h5 className="text-center text-info lyrics fs-3">I turned myself into a pickle, morty! I'm pickle ri-i-i-ick!! </h5>
             </div>
