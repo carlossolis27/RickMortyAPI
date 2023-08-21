@@ -44,7 +44,7 @@ const getCharacterClass = (name) => {
         <div id="carouselExampleAutoplaying" className='carousel slide ' data-bs-ride="carousel">
             <div className='carousel-inner'>
             <div className="carousel-item active">
-            <img src="src/assets/img/RickandMortySlide1.png" className='d-block w-100' alt="Rick1"/>
+            <img src="src/assets/img/pie_manzana_3.jpg" className='d-block w-100' alt="Rick1"/>
             <div className="carousel-caption d-md-block">
             <h5 className="text-center text-info lyrics fs-3">Welcome to the club pal!.</h5>
             </div>
