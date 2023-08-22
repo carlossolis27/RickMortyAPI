@@ -143,5 +143,6 @@ npm install @mui/icons-material
 | [<img src="https://avatars.githubusercontent.com/u/80738178?s=400&u=bf225aa72af9e37f869241a241e08254bb04d972&v=4" width=115><br><sub>Ramón Nuñez</sub>](https://github.com/ramonsolis11) | [<img src="https://avatars.githubusercontent.com/u/86701019?v=4" width=115><br><sub>Moises Elvir</sub>](https://github.com/MoisesElvir) | [<img src="https://avatars.githubusercontent.com/u/127003959?v=4" width=115><br><sub>Michael Maldonado</sub>](https://github.com/Maikkel43) | [<img src="https://avatars.githubusercontent.com/u/80052500?v=4" width=115><br><sub>Carlos Solis</sub>](https://github.com/carlossolis27) | [<img src="https://avatars.githubusercontent.com/u/132025425?s=400&u=ae584811753231ca3f06b0b8165577468354da00&v=4" width=115><br><sub>Noe Hercules</sub>](https://github.com/NoeHercules) |
 | :---: | :---: | :---: | :---: | :---: |
 
+
 Se agradece la contribución de todos los colaboradores en la finalización exitosa de este proyecto.
 
