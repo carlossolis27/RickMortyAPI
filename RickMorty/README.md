@@ -63,7 +63,7 @@ RickMortyAPI/
 <div align="center">
     <img src="https://media3.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif?cid=ecf05e47y8hzp27x5wtjrw7bpv10ot6yvmxgk7rws3ra3nig&ep=v1_gifs_related&rid=giphy.gif&ct=g" width="200">
 
-<h1 align="center"> Proyecto Website API Rick and Morty </h1>
+# Proyecto Website API Rick and Morty
 
 <p align="left">
    <img src="https://img.shields.io/badge/STATUS-FINALIZADO-brightgreen">
@@ -92,7 +92,11 @@ Visita mi [sitio web](https://rickandmortyapp1.netlify.app/) para obtener más i
 
 Este proyecto consiste en la elaboraión de un sitio web utilizando los datos almacenados en la API de Rick and Morty. El objetivo principal es practicar y demostrar habilidades en el desarrollo web utilizando tecnologías como HTML, JavaScript, React (principalmente) y Bootstrap.
 
-<h4 align="center">Descripción del proyecto</h4>
+## Descripción del proyecto
+
+El proyecto se desarrolló como parte de la asignatura FSJ-18 bajo la tutoría de Kenia Yaneth Paiz Chacón. ...
+
+## Creación del proyecto
 
 El proyecto se desarrolló como parte de la asignatura FSJ-18 bajo la tutoría de Kenia Yaneth Paiz Chacón. La fecha de inicio del proyecto fue el 29 de julio de 2023, y la fecha de entrega fue el 16 de agosto de 2023. Durante el proyecto, se abordaron los siguientes apartados:
 
@@ -124,19 +128,20 @@ npm install react-icons
 npm install @mui/icons-material
 
 <div align="center">
-    <h3> 🔨 Languages and Tools:</h3>
+    <h3>🔨 Lenguajes y Herramientas:</h3>
     <div>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="50" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" width="50" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" width="50" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" alt="Bootstrap" width="50" height="50"/>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="50" height="50"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" width="50" height="50"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" width="50" height="50"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" width="50" height="50"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" alt="Bootstrap" width="50" height="50"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" width="50" height="50"/>
+    </div>
 </div>
 
 ## Colaboradores
 
-| [<img src="https://avatars.githubusercontent.com/u/80738178?s=400&u=bf225aa72af9e37f869241a241e08254bb04d972&v=4" width=115><br><sub>Ramón Nuñez</sub>](https://github.com/ramonsolis11) |  [<img src="https://avatars.githubusercontent.com/u/86701019?v=4" width=115><br><sub>Moises Elvir</sub>](https://github.com/MoisesElvir) |  [<img src="https://avatars.githubusercontent.com/u/127003959?v=4" width=115><br><sub>Michael Maldonado</sub>](https://github.com/Maikkel43) | [<img src="https://avatars.githubusercontent.com/u/80052500?v=4" width=115><br><sub>Carlos Solis</sub>](https://github.com/carlossolis27) | <img src="https://avatars.githubusercontent.com/u/132025425?s=400&u=ae584811753231ca3f06b0b8165577468354da00&v=4" width=115><br><sub>Noe Hercules</sub>](https://github.com/NoeHercules) |
+| [<img src="https://avatars.githubusercontent.com/u/80738178?s=400&u=bf225aa72af9e37f869241a241e08254bb04d972&v=4" width=115><br><sub>Ramón Nuñez</sub>](https://github.com/ramonsolis11) | [<img src="https://avatars.githubusercontent.com/u/86701019?v=4" width=115><br><sub>Moises Elvir</sub>](https://github.com/MoisesElvir) | [<img src="https://avatars.githubusercontent.com/u/127003959?v=4" width=115><br><sub>Michael Maldonado</sub>](https://github.com/Maikkel43) | [<img src="https://avatars.githubusercontent.com/u/80052500?v=4" width=115><br><sub>Carlos Solis</sub>](https://github.com/carlossolis27) | [<img src="https://avatars.githubusercontent.com/u/132025425?s=400&u=ae584811753231ca3f06b0b8165577468354da00&v=4" width=115><br><sub>Noe Hercules</sub>](https://github.com/NoeHercules) |
 | :---: | :---: | :---: | :---: | :---: |
 
-
 Se agradece la contribución de todos los colaboradores en la finalización exitosa de este proyecto.
+
