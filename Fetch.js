@@ -17,3 +17,9 @@ fetch(apiUrl)
   .catch(error => {
     console.error('There was a problem with the fetch operation:', error);
   });
+
+
+1. We define the URL of the Rick and Morty API endpoint.
+2. We use the fetch function to make a GET request to the API.
+3. We check if the response is OK and then parse the response as JSON.
+4. Finally, we handle the data or any potential errors in the then and catch blocks.
