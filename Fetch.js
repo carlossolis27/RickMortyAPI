@@ -23,3 +23,6 @@ fetch(apiUrl)
 2. We use the fetch function to make a GET request to the API.
 3. We check if the response is OK and then parse the response as JSON.
 4. Finally, we handle the data or any potential errors in the then and catch blocks.
+
+You can replace the apiUrl with the specific endpoint you want to fetch, such as character details, episodes, locations, etc., 
+based on the documentation provided by the Rick and Morty API.
